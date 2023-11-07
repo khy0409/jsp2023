@@ -18,12 +18,12 @@ public class JDBConnect {
     public JDBConnect() {
         try {
             // JDBC 드라이버 로드
-            Class.forName("org.mariadb.jdbc.Driver"); //mariadb 가져오세연
+            Class.forName("oracle.jdbc.OracleDriver"); //oracle 가져오세연
 
             // DB에 연결
-            String url = "jdbc:mariadb://localhost:3307/devdb";
-			String user = "devuser";
-			String password = "devpass"; 
+            String url = "jdbc:oracle:thin:@localhost:1521:xe"; 
+			String user = "musthave";
+			String password = "1234"; 
             con = DriverManager.getConnection(url, user, password); //아 예
 
             System.out.println("DB 연결 성공(기본 생성자)");
@@ -48,20 +48,6 @@ public class JDBConnect {
             e.printStackTrace();
         }
     }
-
-    // 세 번째 생성자
-	/*
-	 * public JDBConnect(ServletContext application) { try { // JDBC 드라이버 로드 String
-	 * driver = application.getInitParameter("OracleDriver"); Class.forName(driver);
-	 * 
-	 * // DB에 연결 String url = application.getInitParameter("OracleURL"); String id =
-	 * application.getInitParameter("OracleId"); String pwd =
-	 * application.getInitParameter("OraclePwd"); con =
-	 * DriverManager.getConnection(url, id, pwd);
-	 * 
-	 * System.out.println("DB 연결 성공(인수 생성자 2)"); } catch (Exception e) {
-	 * e.printStackTrace(); } }
-	 */
 
     // 연결 해제(자원 반납)
     public void close() { 
