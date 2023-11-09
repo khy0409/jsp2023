@@ -13,7 +13,7 @@ public class JDBConnect {
     public Statement stmt;  
     public PreparedStatement psmt;  
     public ResultSet rs;
-
+    
     // 기본 생성자
     public JDBConnect() {
         try {
