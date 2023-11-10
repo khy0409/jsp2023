@@ -28,4 +28,6 @@ public class MemberDAO extends DBConnPool {
 		}
 		return dto;
 	}
+
+
 }
