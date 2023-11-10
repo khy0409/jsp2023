@@ -5,7 +5,7 @@
 <%@ include file="./IsLoggedIn.jsp"%> 
 <%
 String num = request.getParameter("num");  // 일련번호 받기 
-BoardDAO dao = new BoardDAO(application);  // DAO 생성
+BoardDAO dao = new BoardDAO();  // DAO 생성
 BoardDTO dto = dao.selectView(num);        // 게시물 가져오기 
 String sessionId = session.getAttribute("UserId").toString(); // 로그인 ID 얻기 
 if (!sessionId.equals(dto.getId())) {      // 본인인지 확인

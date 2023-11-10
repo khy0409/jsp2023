@@ -18,8 +18,9 @@
  psmt.setString(2, pass);
  psmt.setString(3, name);
  
+ /* 
  int inResult = psmt.executeUpdate();
- out.println(inResult + "행이 입력되엇슴다");
+ out.println(inResult + "행이 입력되엇슴다"); */
  
  jdbc.close();
  %>

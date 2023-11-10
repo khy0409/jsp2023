@@ -8,7 +8,7 @@
     pageEncoding="UTF-8"%>
 <%
 // DAO를 생성해 DB에 연결
-BoardDAO dao = new BoardDAO(application);
+BoardDAO dao = new BoardDAO();
 
 // 사용자가 입력한 검색 조건을 Map에 저장
 Map<String, Object> param = new HashMap<String, Object>();
