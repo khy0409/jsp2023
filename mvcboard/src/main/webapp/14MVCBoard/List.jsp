@@ -10,7 +10,7 @@
 <title>목록</title>
 </head>
 <body>
-	목록 ${ 2*3 }
+	목록 ${ 2*3 } 
 	<hr>
 	<%=request.getAttribute("count")%>
 	<hr>
@@ -29,5 +29,6 @@
 	<%
 	}
 	%>
+	${requestScope["map"]["pagingImg"] }
 </body>
 </html>
